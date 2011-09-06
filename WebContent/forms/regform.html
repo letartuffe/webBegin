@@ -4,33 +4,77 @@
   <meta http-equiv="Content-Type"
  content="text/html; charset=EUC-KR">
   <title>입력양식 작성하기</title>
+
+
+<script type="text/javascript">
+
+	function regCheck(){
+
+		nm = document.regForm.usernm.value;
+		ps = document.regForm.password.value;
+		m = document.regForm.email.value;
+		
+		
+		if (nm == '' || nm == null)
+		{
+			alert("이름을 기입해주세요");
+			document.regForm.usernm.focus();
+			return false;
+		}else{
+		
+			if (ps == '' || ps == null)
+			{
+				alert("비밀번호을 기입해주세요");
+				document.regForm.password.focus();
+				return false;
+				
+			}else{
+				if (m == '' || m == null)
+				{
+					alert("이메일을 기입해주세요");
+					document.regForm.email.focus();
+					return false;
+					
+				}else{
+					return true;
+				}
+			}
+		}
+	}
+
+</script>
+
+
 </head>
 <body>
 개인정보 등록하기
-<hr><br>
-<form method="post" action="e" name="1">
+<hr>
+*표시부분은 반드시 기입하셔야하는 부분입니다.
+<br><br><br>
+
+<form method="post" action="regOK.html" name="regForm">
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
-        <td>이름 :</td>
-        <td><input name="usernm" type="text"></td>
+        <td>*이름 :</td>
+        <td><input type="text" name="usernm" ></td>
       </tr>
       <tr>
-        <td>비번 :</td>
-        <td><input name="password" type="password"></td>
+        <td>*비번 :</td>
+        <td><input  name="password" type="password"></td>
       </tr>
       <tr>
-        <td>메일 :</td>
-        <td><input name="email" value="asdf@asdf.com"
- type="text"></td>
+        <td>*메일 :</td>
+        <td><input type="text" name="email" value="asdf@asdf.com"
+ ></td>
       </tr>
       <tr>
         <td>전화 :</td>
-        <td><input name="usernm" type="text"></td>
+        <td><input  type="text" name="phone"></td>
       </tr>
       <tr>
         <td>주소 : </td>
-        <td><input name="usernm" type="text"></td>
+        <td><input name="address" type="text"></td>
       </tr>
       <tr>
         <td>자기소개:</td>
@@ -65,7 +109,8 @@
       <tr>
         <td colspan="2" align="center">
         <input type="button" name="그냥" value="그냥">
-        <input type="submit" name="submit" value="submit">
+       <input type="submit"
+ value="가입하기" name="submit" onclick="return regCheck();">
         <input type="reset"> 
         
         </td>
