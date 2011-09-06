@@ -3,10 +3,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+
+
+
 </head>
 <body>
+<script type="text/javascript">
 
-<form method="post" action="loginOK.html" name="login">
+	function loginCheck(){
+		msg = document.loginForm.id.value;
+		if(msg){		
+			msg2 = document.loginForm.pass.value;
+			if(msg2){
+				return true;
+			}else{
+				alert("비밀번호를 입력해주세요");
+				document.loginForm.pass.focus();
+				return false;
+			}
+		}else{
+			alert("아이디를 입력해주세요");
+			document.loginForm.id.focus();
+			return false;
+		}
+
+
+	}
+
+</script>
+<form method="post" name="loginForm"  action="loginOK.html">
   <table border="0"
  cellpadding="2" cellspacing="2">
     <tbody>
@@ -24,9 +49,9 @@
             </tr>
             <tr>
               <td colspan="2" align="center"><input type="submit"
- value="로그인" name="submit"><input type="reset"
+ value="로그인" name="submit" onclick="return loginCheck();"><input type="reset"
  value="다시입력" name="reset" type="reset"><input type="button"
- value="회원가입" name="regForm" type="button"></td>
+ value="회원가입" name="regForm" type="button" onclick="location.href='regform.html'">
             </tr>
           </tbody>
         </table>
