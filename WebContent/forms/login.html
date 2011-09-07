@@ -12,7 +12,7 @@
 		if(msg){		
 			msg2 = document.loginForm.pass.value;
 			if(msg2){
-				return true;
+				
 			}else{
 				alert("비밀번호를 입력해주세요");
 				document.loginForm.pass.focus();
@@ -24,6 +24,16 @@
 			return false;
 		}
 
+		today = new Date();
+		y = today.getFullYear();
+		m = today.getMonth();
+		d = today.getDate();
+		h = today.getHours();
+		min = today.getMinutes();
+		
+		
+		document.loginForm.dateInfo.value = y+"."+m+"."+d+"-"+h+":"+min;
+		return true;
 
 	}
 
@@ -31,7 +41,8 @@
 </head>
 <body>
 
-<form method="post" name="loginForm"  action="loginOK.html">
+<form method="get" name="loginForm"  action="loginOK.html">
+<input type="hidden" name="dateInfo" value="">
   <table border="0"
  cellpadding="2" cellspacing="2">
     <tbody>

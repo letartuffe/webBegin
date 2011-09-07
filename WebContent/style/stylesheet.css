@@ -1,0 +1,23 @@
+@CHARSET "EUC-KR";
+
+h1 {color:blue}
+
+h2 {color:orange;font-family:arial black}
+
+h2.textover {text-decoration: overline;color: yellow;}
+
+h3 {color:green;size:20}
+
+p {color:navy;font-family: monospace;font-weight: bold;font-style: italic;}
+
+.style{color:purple;font-family:±Ã¼­Ã¼}
+#type1{color:red}
+#noList{list-style-type : none;}
+
+#bgStyle{background-image: url('../images/11.jpg');background-repeat: no-repeat;background-position: center center}
+
+
+
+a:LINK{text-decoration: none;}
+a:HOVER{background-color: yellow; }
+a:visited {text-decoration: none; color:black}

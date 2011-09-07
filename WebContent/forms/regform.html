@@ -13,7 +13,34 @@
 		nm = document.regForm.usernm.value;
 		ps = document.regForm.password.value;
 		m = document.regForm.email.value;
+		file = document.regForm.picture.value.substring(document.regForm.picture.value.lastIndexOf(".")+1);
+
+	
+		file = file.toLowerCase();
 		
+		/*      
+		switch (file) {
+		     case "gif" :
+		     case "jpg" :
+		     case "png" :
+		     case "bmp" :
+		     case "tif" :
+		     case "jpe" :
+		     case "jpeg" :
+	   		break;
+	   	  default:
+	        	 alert("그림 파일 입력 양식에 맞지 않는 파일입니다.")
+	         	return false;
+	    	}
+		
+		*/
+		
+		if (file.length > 0){
+			if(file != 'jpg' && file != 'png'){
+				alert("jpg, png만 가능");
+				
+			}
+		}
 		
 		if (nm == '' || nm == null)
 		{
@@ -40,6 +67,8 @@
 				}
 			}
 		}
+		
+		
 	}
 
 </script>
@@ -52,9 +81,16 @@
 *표시부분은 반드시 기입하셔야하는 부분입니다.
 <br><br><br>
 
+
 <form method="post" action="regOK.html" name="regForm">
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>
+      <tr>
+        <td>아이디 :</td>
+        <td><input type="text" name="userid" > <input type="button" name="sameChk" 
+        onclick="window.open('idCheck.html','','width=300 height=100')" value="중복확인"> </td>
+        
+      </tr>
       <tr>
         <td>*이름 :</td>
         <td><input type="text" name="usernm" ></td>
@@ -102,6 +138,11 @@
         <option value="">세느강</option>
         <option value="">타임스퀘어</option>
         </select>
+        </td>
+      </tr>
+      <tr>
+        <td>사진 첨부</td>
+        <td><input type="file" name="picture">
         </td>
       </tr>
       <tr>
