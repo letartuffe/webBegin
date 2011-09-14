@@ -6,12 +6,12 @@ h2 {color:orange;font-family:arial black}
 
 h2.textover {text-decoration: overline;color: yellow;}
 
-h3 {color:green;size:20}
+h3 {color:gray;size:50px ; border-style: dashed; border-color: red ; padding:50px ; width:300px; }
 
 p {color:navy;font-family: monospace;font-weight: bold;font-style: italic;}
 
 .style{color:purple;font-family:±Ã¼­Ã¼}
-#type1{color:red}
+#type1{color:blue marin}
 #noList{list-style-type : none;}
 
 #bgStyle{background-image: url('../images/11.jpg');background-repeat: no-repeat;background-position: center center}
@@ -21,3 +21,32 @@ p {color:navy;font-family: monospace;font-weight: bold;font-style: italic;}
 a:LINK{text-decoration: none;}
 a:HOVER{background-color: yellow; }
 a:visited {text-decoration: none; color:black}
+
+
+p.solid1{border-style: solid;border-color: blue marin }
+p.dotted1{border-style: dotted;border-color: blue marin}
+p.dashed1{border-style: dashed;border-color: blue marin}
+p.double1{border-style: double;border-color: blue marin}
+p.ridge1{border-style:ridge;border-color: blue marin}
+p.groove1{border-style: groove;border-color: blue marin}
+p.inset1{border-style: inset;border-color: blue marin}
+p.outset1{border-style: outset;border-color: blue marin}
+
+
+
+.layer1{ position: absolute; top: 200px ; left: 200px ; width: 100px ; height: 100px;border: dashed 1px gray ; background-color: white ; z-index:3 }
+.layer2{ position: absolute; top: 400px ; left: 400px ; width: 200px ; height: 200px;border: solid 1px blue;z-index: 1}
+.layer3{ position: absolute; top: 250px ; left: 250px ; width: 300px ; height: 300px;border: solid 1px blue; background-color: green;z-index: 2}
+
+
+#layerPink{position: absolute; top: 200px ; left: 200px ; width: 200px ; height: 100px; border: dashed 1px gray ; background-color: pink ; z-index:3 ;color:white;   font-size: 110px ;text-shadow: black 2px -2px 2px;}
+#layeryellow{position: absolute; top: 300px ; left: 400px ; width: 200px ; height: 100px;border: dashed 1px gray ; background-color: yellow ; z-index:2 ;font-size: 110px }
+#layerBig{position: absolute; top: 200px ; left: 200px ; width: 400px ; height: 200px;  background-color: white ; z-index:1 ; text-align: right}
+
+
+
+
+#sponge{ position: absolute; top: 250px ; left: 100px ;visibility: hidden;}
+#lee{ position: absolute; top: 250px ; left: 100px ;visibility: hidden;}
+#sin{ position: absolute; top: 250px ; left: 100px ;visibility: hidden;}
+#j{ position: absolute; top: 250px ; left: 100px ;visibility: hidden;}
